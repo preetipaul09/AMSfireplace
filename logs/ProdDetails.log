@@ -1,0 +1,8 @@
+2025-05-29 17:18:18,588:__main__:Selenium triggered
+2025-05-29 17:23:23,782:__main__:Attempt 1/10 failed with error: HTTPConnectionPool(host='localhost', port=55636): Read timed out. (read timeout=120)
+2025-05-29 17:23:30,744:__main__:Attempt 2/10 failed with error: Message: Process unexpectedly closed with status 0
+
+2025-05-29 17:30:49,516:__main__:Selenium triggered
+2025-05-29 17:32:19,566:__main__:No products found on page 3 for https://amsfireplace.com/gas-torches/.
+2025-05-29 17:32:19,567:__main__:Total 51 products found for https://amsfireplace.com/gas-torches/.
+2025-05-29 17:56:39,900:__main__:Finished ThreadMain in 1550.37 second(s)
