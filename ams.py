@@ -144,6 +144,7 @@ def getAllProUrl(driver, category_url):
         # open("soup.txt", "w", encoding="utf-8").write(str(soup))
         # exit()
         products = driver.find_elements(By.CSS_SELECTOR, 'div#searchspring-content ul.productGrid li.product a')
+        count_before = len(product_urls)
         if not products:
             logger.debug(f"No products found on page {pageNumber} for {new_category_url}.")
             break
@@ -155,7 +156,12 @@ def getAllProUrl(driver, category_url):
                 with open("productUrls(preeti).txt", "a", encoding="utf-8") as f:
                     f.write(product_url + '\n')
 
-        print(f"Total unique product URLs found so far: {len(product_urls)}")
+        count_after = len(product_urls)
+        if count_after == count_before:
+            print(f"No new products found on page {pageNumber}. Assuming end of listing.")
+            break
+
+        print(f"[Page {pageNumber}] Total unique product URLs found so far: {count_after}")
         pageNumber += 1
         if pageNumber == 50:
             break
